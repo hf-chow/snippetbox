@@ -33,7 +33,7 @@ func main() {
     mux.HandleFunc("/snippet/create", snippetCreate)
 
 
-    log.Printf("Starting server on %s", cfg.addr)
+    infoLog.Printf("Starting server on %s", cfg.addr)
     err := http.ListenAndServe(cfg.addr, mux)
-    log.Fatal(err)
+    errorLog.Fatal(err)
 }
